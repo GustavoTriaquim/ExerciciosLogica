@@ -1,0 +1,40 @@
+programa {
+  funcao inicio() {
+    real numero
+
+    escreva("Digite um numero: ")
+    leia(numero)
+
+    se (numero == 0) {
+      escreva("Numero zero")
+    } senao {
+      parOuImpar(numero)
+      positivoOuNegativo(numero)
+      inteiroOuDecimal(numero)
+    }
+  }
+
+  funcao parOuImpar(real num) {
+    se (num % 2 == 0) {
+      escreva("Par \n")
+    } senao {
+      escreva("Impar \n")
+    }
+  }
+
+  funcao positivoOuNegativo(real num) {
+    se (num < 0) {
+      escreva("Negativo \n")
+    } senao {
+      escreva("Positivo \n")
+    } 
+  }
+
+  funcao inteiroOuDecimal(real num) {
+    se (num % 1 == 0) {
+      escreva("Inteiro \n")
+    } senao {
+      escreva("Decimal \n")
+    }
+  }
+}
