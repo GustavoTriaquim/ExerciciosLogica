@@ -1,0 +1,14 @@
+programa {
+  funcao inicio() {
+    real numeros[3], resultado
+
+    escreva("Digite 3 numeros: \n")
+    leia(numeros[0])
+    leia(numeros[1])
+    leia(numeros[2])
+
+    resultado = (numeros[0] + numeros[1] + numeros[2]) / 3.0
+
+    escreva("Sua media é de ", resultado)
+  }
+}
