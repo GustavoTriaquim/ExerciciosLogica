@@ -1,0 +1,12 @@
+programa {
+  funcao inicio() {
+    real nota[2], media
+
+    escreva("Digite as notas do aluno: \n")
+    leia(nota[0], nota[1])
+
+    media = (nota[0] + nota[1]) / 2
+
+    escreva("Media: ", media)
+  }
+}
