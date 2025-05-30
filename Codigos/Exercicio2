@@ -1,0 +1,43 @@
+programa {
+  funcao inicio() {
+    inteiro anoNasc, anoAtual, idade
+    cadeia aniversario
+    logico fezAniversario
+
+    anoNasc = pedirAno("Digite o ano em que nasceu: ")
+    anoAtual = pedirAno("Digite o ano em que estamos: ")
+    
+    fezAniversario = verificarAniversario()
+
+    idade = calcularIdade(anoNasc, anoAtual, fezAniversario)
+    
+    escreva("Voce tem ", idade, " ano(s)")
+  }
+  
+  funcao inteiro pedirAno(cadeia mensagem) {
+    inteiro ano
+    escreva(mensagem)
+    leia(ano)
+    retorne ano
+  }
+
+  funcao logico verificarAniversario() {
+    cadeia resposta
+    escreva("Voce ja fez aniversario esse ano? (sim/nao) ")
+    leia(resposta)
+
+    se (resposta == "sim" ou resposta == "Sim") {
+      retorne verdadeiro
+    } senao {
+      retorne falso
+    }
+  }
+
+  funcao inteiro calcularIdade(inteiro nasc, inteiro atual, logico aniversariante) {
+    se (aniversariante) {
+      retorne atual - nasc
+    } senao {
+      retorne (atual - nasc) - 1
+    }
+  }
+}
