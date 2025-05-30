@@ -1,0 +1,32 @@
+programa {
+  funcao inicio() {
+    inteiro numero
+    logico condicao = falso
+
+    enquanto (condicao == falso) {
+      escreva("Digite um numero de 3 digitos: ")
+      leia(numero)
+      condicao = verificarNumero(numero)
+    }
+
+    inverterNumero(numero)
+  }
+
+  funcao logico verificarNumero(inteiro num) {
+    se (num >= 100 e num <= 999) {
+      retorne verdadeiro
+    } senao {
+      escreva("O numero deve ter 3 digitos!\n")
+      retorne falso
+    }
+  }
+
+  funcao inverterNumero(inteiro num) {
+    inteiro centena = num / 100
+    inteiro dezena = (num % 100) / 10
+    inteiro unidade = num % 10
+
+    escreva("Inversao: ", unidade, dezena, centena, "\n")
+    escreva("Numero inicial: ", num)
+  }
+}
