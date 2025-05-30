@@ -1,0 +1,34 @@
+programa {
+  funcao inicio() {
+    inteiro num, resultado
+    cadeia validacao
+    
+    escreva("Digite um numero: ")
+    leia(num)
+
+    validacao = validarNumero(num)
+
+    se (validacao == "zero") {
+      resultado = 1
+    } senao se (validacao == "negativo") {
+      escreva("O numero tem que ser positivo!")
+    } senao {
+      resultado = 1
+      enquanto (num > 1) {
+        resultado = resultado * num
+        num = num - 1
+      }
+      escreva ("Fatorial = ", resultado)
+    }
+  }
+
+  funcao cadeia validarNumero(inteiro numero) {
+    se (numero == 0) {
+      retorne "zero"
+    } senao se (numero < 0) {
+      retorne "negativo"
+    } senao {
+      retorne "valido"
+    }
+  }
+}
