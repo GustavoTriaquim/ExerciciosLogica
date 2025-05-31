@@ -1,0 +1,19 @@
+programa {
+  funcao inicio() {
+    real salario
+    real reajuste = 1.05
+
+    escreva("Digite o seu salario: ")
+    leia(salario)
+
+    real resultado = reajustarSalario(salario, reajuste)
+
+    escreva("Seu reajuste de ", salario, " para ", resultado)
+  }
+
+  funcao real reajustarSalario(real sal, real rea) {
+    real res = sal * rea
+
+    retorne res
+  }
+}
