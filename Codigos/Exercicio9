@@ -1,0 +1,31 @@
+programa {
+  funcao inicio() {
+    inteiro numero
+
+    escreva("Digite um numero: ")
+    leia(numero)
+
+    se (ehPrimo(numero)) {
+      escreva("Primo")
+    } senao {
+      escreva("Nao primo")
+    }
+  }
+  
+  funcao logico ehPrimo(inteiro n) {
+    inteiro i
+
+    se (n < 2) {
+      retorne falso
+    }
+
+    i = 2
+    enquanto (i * i <= n) {
+      se (n % i == 0) {
+        retorne falso
+      }
+      i = i + 1
+    }
+    retorne verdadeiro
+  }
+}
