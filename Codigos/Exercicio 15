@@ -1,0 +1,31 @@
+programa {
+  inteiro anos, dias, meses, semanas
+
+  funcao inicio() {
+    inteiro anoNasc, anoAtual
+
+    escreva("Digite o ano de nascimento: ")
+    leia(anoNasc)
+
+    escreva("Digite o ano atual: ")
+    leia(anoAtual)
+
+    calcularDados(anoNasc, anoAtual)
+    escreverDados()
+  }
+
+  funcao calcularDados(inteiro nasc, inteiro atual) {
+    anos = atual - nasc
+    meses = anos * 12
+    dias = anos * 365
+    semanas = dias / 7
+  }
+
+  funcao escreverDados() {
+    escreva("Idade aproximada:\n")
+    escreva(anos, " anos\n")
+    escreva(meses, " meses\n")
+    escreva(semanas, " semanas\n")
+    escreva(dias, " dias\n")
+  }
+}
