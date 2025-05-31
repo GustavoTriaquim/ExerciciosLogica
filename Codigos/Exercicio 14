@@ -1,0 +1,39 @@
+programa {
+  inclua biblioteca Matematica --> mat
+
+  funcao inicio() {
+    real peso, altura, imc
+    cadeia prompt
+
+    escreva("Digite seu peso: ")
+    leia(peso)
+    escreva("Digite sua altura: ")
+    leia(altura)
+
+    imc = calcularIMC(peso, altura)
+    prompt = tabelaIMC(imc)
+
+    escreva("Seu IMC é: ", mat.arredondar(imc, 2), prompt)
+  }
+
+  funcao real calcularIMC(real kg, real m) {
+    real resultado = kg / (m * m)
+    retorne resultado
+  }
+
+  funcao cadeia tabelaIMC(real indice) {
+    se (indice < 18.5) {
+      retorne " - Abaixo do peso"
+    } senao se (indice >= 18.5 e indice <= 24.9) {
+      retorne " - Peso ideal"
+    } senao se (indice >= 25.0 e indice <= 29.9) {
+      retorne " - Levemente acima do peso"
+    } senao se (indice >= 30.0 e indice <= 34.9) {
+      retorne " - Obesidade grau I"
+    } senao se (indice >= 35.0 e indice <= 39.9) {
+      retorne " - Obesidade grau II"
+    } senao {
+      retorne " - Obesidade grau III"
+    }
+  }
+}
