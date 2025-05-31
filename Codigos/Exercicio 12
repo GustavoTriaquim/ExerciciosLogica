@@ -1,0 +1,19 @@
+programa {
+  funcao inicio() {
+    real quilometros
+    real milhas = 0.621371
+
+    escreva("Digite a distancia em Km: ")
+    leia(quilometros)
+
+    real conversao = converterKmEmMilhas(quilometros, milhas)
+
+    escreva("Conversao para milhas: ", conversao)
+  }
+
+  funcao real converterKmEmMilhas(real km, real milha) {
+    real resultado = km * milha
+
+    retorne resultado
+  }
+}
